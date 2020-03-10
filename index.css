@@ -20,6 +20,7 @@ iframe {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 
 .project {
@@ -29,6 +30,9 @@ iframe {
 	padding: 3px;
 	transition: box-shadow 0.25s ease-out;
 	cursor: pointer;
+	margin: 10px;
+	min-width: 200px;
+	flex: 1 0 31%;
 }
 
 .project:hover {
