@@ -12,7 +12,7 @@ document.getElementById('ontimetracker').addEventListener('click', function() {
 })
 
 // prevent event propogation on mailto anchor tag
-$('#mailto').click((e)=>{
+$('#mailto').click(function (e){
 	e.stopPropagation();
 })
 
@@ -28,8 +28,8 @@ const links = [
 	'https://github.com/aln0071/File-Stripper'
 ];
 
-ids.forEach((id, index)=>{
-	$(`#${id}`).click(()=>{
+ids.forEach(function (id, index) {
+	$('#'+id).click(function () {
 		window.open(links[index], '_blank');
 	})
 })
