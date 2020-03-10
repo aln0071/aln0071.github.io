@@ -32,7 +32,7 @@ iframe {
 	cursor: pointer;
 	margin: 10px;
 	min-width: 200px;
-	flex: 1 0 31%;
+	flex: 1 0 31%;	/* flex-grow 0 flex-basis */
 }
 
 .project:hover {
