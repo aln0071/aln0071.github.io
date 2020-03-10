@@ -16,6 +16,26 @@ $('#mailto').click((e)=>{
 	e.stopPropagation();
 })
 
+// section to handle click on other projects
+
+const ids = ['pic-extractor', 'jformat', 'date-picker', 'filter-table', 'pyautogui', 'firewall-breaker'];
+const links = [
+	'https://github.com/aln0071/PicExtractor',
+	'https://github.com/aln0071/jformat',
+	'https://www.npmjs.com/package/react-lite-datepicker',
+	'https://www.npmjs.com/package/react-filter-tables',
+	'https://github.com/aln0071/Python-Cisco-Autoconnect',
+	'https://github.com/aln0071/File-Stripper'
+];
+
+ids.forEach((id, index)=>{
+	$(`#${id}`).click(()=>{
+		window.open(links[index], '_blank');
+	})
+})
+
+// end of click handling section
+
 function resetFeatureIframeHeight() {
 	let height = document.documentElement.clientHeight - $('#featureiframe').offset().top - 20;
 	$('#featureiframe').height(height);
