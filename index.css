@@ -9,6 +9,7 @@ iframe {
 .jumbotron {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+	transition: box-shadow 0.25s ease-out;
 }
 
 .jumbotron:hover {
