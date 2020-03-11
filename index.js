@@ -11,6 +11,11 @@ document.getElementById('ontimetracker').addEventListener('click', function() {
 	window.open("https://chrome.google.com/webstore/detail/ontime-tracker/geihfdjjmcldhcdgfipoodbniaepkfai", '_blank');
 })
 
+// event listener to handle click on chicken egg incubator
+document.getElementById('incubator').addEventListener('click', function() {
+	window.open("https://github.com/aln0071/Incubator", '_blank');
+})
+
 // prevent event propogation on mailto anchor tag
 $('#mailto').click(function (e){
 	e.stopPropagation();
