@@ -1,5 +1,6 @@
 
 var currentTab = '';
+var content = null;
 
 // event listener to handle click on feature to json jombotron
 document.getElementById('feature').addEventListener('click', function() {
@@ -21,7 +22,7 @@ document.getElementById('header-changer').addEventListener('click', function(eve
 	if(event.target.tagName.toLowerCase() === 'a') {
 		return;
 	}
-	const content = this.getElementsByClassName('expansion-panel')[0];
+	content = this.getElementsByClassName('expansion-panel')[0];
 	if(content.style.maxHeight) {
 		content.style.maxHeight = null;
 	} else {
@@ -66,8 +67,14 @@ $('.nav-tabs a[href="#menu1"]').on('shown.bs.tab', function(event){
 $(window).resize(function () {
 	if(currentTab === 'Feature to JSON')
 		resetFeatureIframeHeight();
+	else if(content && content.style.maxHeight) {
+		content.style.maxHeight = content.scrollHeight + "px";
+	} 
 });
 
 $('.nav-tabs a').on('shown.bs.tab', function(event){
   currentTab = $(event.target).text();         // active tab
+  if(content && content.style.maxHeight) {
+	content.style.maxHeight = content.scrollHeight + "px";
+  }
 });
