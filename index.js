@@ -16,6 +16,19 @@ document.getElementById('incubator').addEventListener('click', function() {
 	window.open("https://github.com/aln0071/Incubator", '_blank');
 })
 
+//event listener o handle click on header changer
+document.getElementById('header-changer').addEventListener('click', function(event) {
+	if(event.target.tagName.toLowerCase() === 'a') {
+		return;
+	}
+	const content = this.getElementsByClassName('expansion-panel')[0];
+	if(content.style.maxHeight) {
+		content.style.maxHeight = null;
+	} else {
+		content.style.maxHeight = content.scrollHeight + "px";
+	}
+})
+
 // prevent event propogation on mailto anchor tag
 $('#mailto').click(function (e){
 	e.stopPropagation();
