@@ -3,27 +3,27 @@ var currentTab = '';
 var content = null;
 
 // event listener to handle click on feature to json jombotron
-document.getElementById('feature').addEventListener('click', function() {
+document.getElementById('feature').addEventListener('click', function () {
 	$('.nav-tabs a[href="#menu1"]').tab('show')
 });
 
 // event listener to handle click on ontime tracker jombotron
-document.getElementById('ontimetracker').addEventListener('click', function() {
+document.getElementById('ontimetracker').addEventListener('click', function () {
 	window.open("https://chrome.google.com/webstore/detail/ontime-tracker/geihfdjjmcldhcdgfipoodbniaepkfai", '_blank');
 })
 
 // event listener to handle click on chicken egg incubator
-document.getElementById('incubator').addEventListener('click', function() {
+document.getElementById('incubator').addEventListener('click', function () {
 	window.open("https://github.com/aln0071/Incubator", '_blank');
 })
 
 //event listener o handle click on header changer
-document.getElementById('header-changer').addEventListener('click', function(event) {
-	if(event.target.tagName.toLowerCase() === 'a') {
+document.getElementById('header-changer').addEventListener('click', function (event) {
+	if (event.target.tagName.toLowerCase() === 'a') {
 		return;
 	}
 	content = this.getElementsByClassName('expansion-panel')[0];
-	if(content.style.maxHeight) {
+	if (content.style.maxHeight) {
 		content.style.maxHeight = null;
 	} else {
 		content.style.maxHeight = content.scrollHeight + "px";
@@ -31,12 +31,12 @@ document.getElementById('header-changer').addEventListener('click', function(eve
 })
 
 // prevent event propogation on mailto anchor tag
-$('#mailto').click(function (e){
+$('#mailto').click(function (e) {
 	e.stopPropagation();
 })
 
 // prevent event propogation on teams web app link
-$('#teams-link').click(function (e){
+$('#teams-link').click(function (e) {
 	e.stopPropagation();
 })
 
@@ -54,7 +54,7 @@ const links = [
 ];
 
 ids.forEach(function (id, index) {
-	$('#'+id).click(function () {
+	$('#' + id).click(function () {
 		window.open(links[index], '_blank');
 	})
 })
@@ -66,21 +66,21 @@ function resetFeatureIframeHeight() {
 	$('#featureiframe').height(height);
 }
 
-$('.nav-tabs a[href="#menu1"]').on('shown.bs.tab', function(event){
+$('.nav-tabs a[href="#menu1"]').on('shown.bs.tab', function (event) {
 	resetFeatureIframeHeight();
 });
 
 $(window).resize(function () {
-	if(currentTab === 'Feature to JSON')
+	if (currentTab === 'Feature to JSON')
 		resetFeatureIframeHeight();
-	else if(content && content.style.maxHeight) {
+	else if (content && content.style.maxHeight) {
 		content.style.maxHeight = content.scrollHeight + "px";
-	} 
+	}
 });
 
-$('.nav-tabs a').on('shown.bs.tab', function(event){
-  currentTab = $(event.target).text();         // active tab
-  if(content && content.style.maxHeight) {
-	content.style.maxHeight = content.scrollHeight + "px";
-  }
+$('.nav-tabs a').on('shown.bs.tab', function (event) {
+	currentTab = $(event.target).text();         // active tab
+	if (content && content.style.maxHeight) {
+		content.style.maxHeight = content.scrollHeight + "px";
+	}
 });
