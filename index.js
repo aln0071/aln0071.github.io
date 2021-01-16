@@ -42,7 +42,7 @@ $('#teams-link').click(function (e) {
 
 // section to handle click on other projects
 
-const ids = ['pic-extractor', 'jformat', 'date-picker', 'filter-table', 'pyautogui', 'video-downloader', 'call-manager'];
+const ids = ['pic-extractor', 'jformat', 'date-picker', 'filter-table', 'pyautogui', 'video-downloader', 'call-manager', 'firewall-breaker', 'pi-camera'];
 const links = [
 	'https://github.com/aln0071/PicExtractor',
 	'https://github.com/aln0071/jformat',
@@ -50,7 +50,9 @@ const links = [
 	'https://www.npmjs.com/package/react-filter-tables',
 	'https://github.com/aln0071/Python-Cisco-Autoconnect',
 	'https://github.com/aln0071/VideoDownloader',
-	'https://chrome.google.com/webstore/detail/teams-call-manager/gmklieclhlmicflemopmbllaldmejnkp'
+	'https://chrome.google.com/webstore/detail/teams-call-manager/gmklieclhlmicflemopmbllaldmejnkp',
+	'https://github.com/aln0071/File-Stripper',
+	'https://github.com/aln0071/PiCamera'
 ];
 
 ids.forEach(function (id, index) {
