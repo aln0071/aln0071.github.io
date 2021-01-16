@@ -84,3 +84,10 @@ $('.nav-tabs a').on('shown.bs.tab', function (event) {
 		content.style.maxHeight = content.scrollHeight + "px";
 	}
 });
+
+// for IE support
+if (window.document.documentMode) {
+	// Do IE stuff
+	$("div[class='items-container']").attr("class", "projects-container")
+	$("div[class='item']").attr("class", "project")
+}
