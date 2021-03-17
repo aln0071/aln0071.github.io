@@ -42,7 +42,7 @@ $('#teams-link').click(function (e) {
 
 // section to handle click on other projects
 
-const ids = ['pic-extractor', 'jformat', 'date-picker', 'filter-table', 'pyautogui', 'video-downloader', 'call-manager', 'firewall-breaker', 'pi-camera'];
+const ids = ['pic-extractor', 'jformat', 'date-picker', 'filter-table', 'pyautogui', 'video-downloader', 'call-manager', 'firewall-breaker', 'pi-camera', 'my-stepper'];
 const links = [
 	'https://github.com/aln0071/PicExtractor',
 	'https://github.com/aln0071/jformat',
@@ -52,7 +52,8 @@ const links = [
 	'https://github.com/aln0071/VideoDownloader',
 	'https://chrome.google.com/webstore/detail/teams-call-manager/gmklieclhlmicflemopmbllaldmejnkp',
 	'https://github.com/aln0071/File-Stripper',
-	'https://github.com/aln0071/PiCamera'
+	'https://github.com/aln0071/PiCamera',
+	'https://github.com/aln0071/MyStepper'
 ];
 
 ids.forEach(function (id, index) {
