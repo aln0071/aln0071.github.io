@@ -66,6 +66,9 @@ ids.forEach(function (id, index) {
 
 function resetFeatureIframeHeight() {
 	let height = document.documentElement.clientHeight - $('#featureiframe').offset().top - 20;
+	if(height < 250) {
+		height = 250;
+	}
 	$('#featureiframe').height(height);
 }
 
