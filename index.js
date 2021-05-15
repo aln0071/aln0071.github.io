@@ -40,6 +40,12 @@ $('#teams-link').click(function (e) {
 	e.stopPropagation();
 })
 
+// prevent event propogation for precision mode modal opener link
+$('#precision-modal-opener').click(function (e) {
+	$('#precision-mode-modal').modal();
+	e.stopPropagation();
+})
+
 // section to handle click on other projects
 
 const ids = ['pic-extractor', 'jformat', 'date-picker', 'filter-table', 'pyautogui', 'video-downloader', 'call-manager', 'firewall-breaker', 'pi-camera', 'my-stepper', 'meet-manager'];
@@ -97,4 +103,10 @@ if (window.document.documentMode) {
 	// Do IE stuff
 	$("div[class='items-container']").attr("class", "projects-container")
 	$("div[class='item']").attr("class", "project")
+}
+
+window.onload = () => {
+	if(window.location.hash === '#precision-mode') {
+		$('#precision-mode-modal').modal();
+	}
 }

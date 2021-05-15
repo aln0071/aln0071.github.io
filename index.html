@@ -37,7 +37,12 @@
             <h3>Google Meet Manager</h3>
             <p>
               This chrome extension automatically disconnects Google Meet if number of attendees go below
-              the limit set by user. The user must install the Google Chrome Extension and set the limit after starting the meet.
+              the limit set by user. The user must install the Google Chrome Extension and set the limit after starting
+              the meet.
+              I have added the <a id="precision-modal-opener" href="#precision-mode">Precision Mode</a> to the new
+              Version 1.1 which can distinguish between duplicate users in
+              the meet to
+              get the actual number of users.
             </p>
           </div>
         </div>
@@ -223,6 +228,42 @@
         <p>This is a JSON file generator which allows user to input data from feature file and generate JSON file from
           it. <a href="https://github.com/aln0071/Feature-To-JSON" target="_blank">Source code</a></p>
         <iframe id='featureiframe' class="fillpage" src="./feature/feature.html"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Precision Mode Modal -->
+  <div class="modal fade" id="precision-mode-modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Precision Mode</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          The 'Sleep In Google Meet' extension automatically switches to the Precision Mode when the user keeps the
+          'Meeting details' tab open.
+          By default, the number of users reported by the Google Meet Web Application can contain duplicates. These
+          duplicates occure when
+          someone starts sharing their screen or when a person joins the meet from multiple devices. With the new
+          update, our Chrome Extension
+          can determine the actual number of users who are there in the meet. It can eliminate errors caused when a user
+          starts presenting, and also
+          when a user joins the meet from multiple devices or tabs using the same account. Please note that the
+          Precision Mode is active only
+          when you keep the 'Meeting details' tab open. To open the 'Meeting details' tab, please click on the Google
+          Meet 'Show Everyone' or 'Chats' button.
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
       </div>
     </div>
   </div>
