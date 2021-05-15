@@ -1,4 +1,3 @@
-
 var currentTab = '';
 var content = null;
 
@@ -6,16 +5,6 @@ var content = null;
 document.getElementById('feature').addEventListener('click', function () {
 	$('.nav-tabs a[href="#menu1"]').tab('show')
 });
-
-// event listener to handle click on ontime tracker jombotron
-document.getElementById('ontimetracker').addEventListener('click', function () {
-	window.open("https://chrome.google.com/webstore/detail/ontime-tracker/geihfdjjmcldhcdgfipoodbniaepkfai", '_blank');
-})
-
-// event listener to handle click on chicken egg incubator
-document.getElementById('incubator').addEventListener('click', function () {
-	window.open("https://github.com/aln0071/Incubator", '_blank');
-})
 
 //event listener o handle click on header changer
 document.getElementById('header-changer').addEventListener('click', function (event) {
@@ -40,15 +29,29 @@ $('#teams-link').click(function (e) {
 	e.stopPropagation();
 })
 
-// prevent event propogation for precision mode modal opener link
+// prevent event propogation for precision mode modal opener link and open modal
 $('#precision-modal-opener').click(function (e) {
 	$('#precision-mode-modal').modal();
 	e.stopPropagation();
 })
 
-// section to handle click on other projects
+// section to handle click on elements that lead to other pages
 
-const ids = ['pic-extractor', 'jformat', 'date-picker', 'filter-table', 'pyautogui', 'video-downloader', 'call-manager', 'firewall-breaker', 'pi-camera', 'my-stepper', 'meet-manager'];
+const ids = [
+	'pic-extractor',
+	'jformat',
+	'date-picker',
+	'filter-table',
+	'pyautogui',
+	'video-downloader',
+	'call-manager',
+	'firewall-breaker',
+	'pi-camera',
+	'my-stepper',
+	'meet-manager',
+	'ontimetracker',
+	'incubator'
+];
 const links = [
 	'https://github.com/aln0071/PicExtractor',
 	'https://github.com/aln0071/jformat',
@@ -60,7 +63,9 @@ const links = [
 	'https://github.com/aln0071/File-Stripper',
 	'https://github.com/aln0071/PiCamera',
 	'https://github.com/aln0071/MyStepper',
-	'https://chrome.google.com/webstore/detail/sleep-in-google-meet/ndbljakpfcbaanipholeejgcpajnbjmf/'
+	'https://chrome.google.com/webstore/detail/sleep-in-google-meet/ndbljakpfcbaanipholeejgcpajnbjmf/',
+	'https://chrome.google.com/webstore/detail/ontime-tracker/geihfdjjmcldhcdgfipoodbniaepkfai',
+	'https://github.com/aln0071/Incubator'
 ];
 
 ids.forEach(function (id, index) {
@@ -73,7 +78,7 @@ ids.forEach(function (id, index) {
 
 function resetFeatureIframeHeight() {
 	let height = document.documentElement.clientHeight - $('#featureiframe').offset().top - 20;
-	if(height < 250) {
+	if (height < 250) {
 		height = 250;
 	}
 	$('#featureiframe').height(height);
@@ -105,8 +110,9 @@ if (window.document.documentMode) {
 	$("div[class='item']").attr("class", "project")
 }
 
+// open precision mode modal based on hash params
 window.onload = () => {
-	if(window.location.hash === '#precision-mode') {
+	if (window.location.hash === '#precision-mode') {
 		$('#precision-mode-modal').modal();
 	}
 }
