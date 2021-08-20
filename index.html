@@ -36,13 +36,11 @@
           <div class="container">
             <h3>Google Meet Manager</h3>
             <p>
-              This chrome extension automatically disconnects Google Meet if number of attendees go below
-              the limit set by user. The user must install the Google Chrome Extension and set the limit after starting
-              the meet.
-              I have added the <a id="precision-modal-opener" href="#precision-mode">Precision Mode</a> to the new
-              Version 1.1 which can distinguish between duplicate users in
-              the meet to
-              get the actual number of users.
+              This chrome extension automatically disconnects Google Meet if number of attendees drop below
+              the limit set by user. The user must install the Google Chrome Extension and click on the extension's
+              icon to open the extension's popup. Set the limit in the popup and press the Start button. Now you can relax :D.
+              The extension will automatically cut the call for you when everyone else is leaving the call. Click here to
+              go to the Chrome Web Store to install the extension.
             </p>
           </div>
         </div>
@@ -52,10 +50,10 @@
           <div class="container">
             <h3>Teams Call Manager</h3>
             <p>
-              This chrome extension automatically disconnects Microsoft Teams call if number of attendees go below
-              the limit set by user. The user should start the call from <a id="teams-link" target="_blank"
-                href="https://teams.microsoft.com/">
-                Teams Web Application</a>, and then open the extension to set a limit.
+              This chrome extension automatically disconnects Microsoft Teams call if number of attendees drop below
+              the limit set by user. The user should start the call from
+              <a id="teams-link" target="_blank" href="https://teams.microsoft.com/">Teams Web Application</a>, and
+              then open the extension to set a limit. Click here to go to the Chrome Web Store to install the extension.
             </p>
           </div>
         </div>
@@ -68,6 +66,7 @@
               This is a privacy enhancement tool made available for both Chrome and Firefox browsers.
               It allows the user to edit the title displayed on the current tab. It is useful when you
               switch tabs, and you don't want others to know what is on the other tab by reading the tab title.
+              Click here for more options.
             </p>
             <div class="expansion-panel">
               <hr />
@@ -110,7 +109,7 @@
             <p>This web application converts feature file data to JSON file. I developed it to help speed up insertion
               of Cucumber feature file data into Couchbase for
               testing. This will reduce the time required to manually convert the data to JSON format for insertion into
-              Couchbase.
+              Couchbase. Click here for live demo.
             </p>
           </div>
         </div>
@@ -119,6 +118,10 @@
         <div class="jumbotron jumbotron-fluid" id="ontimetracker" style="cursor: pointer;">
           <div class="container">
             <h3>OnTime Tracker</h3>
+            <p>This Chrome Extension tracks the time spent by employees in IBS Software Private Limited (my first company) and
+            shows a countdown timer which denotes the remaining time that you have to spend in this week inside the company to
+            reach the weekly 45 hours target. I used this especially on Fridays to make sure that I have enough hours for the week.
+            Click here to go to the Chrome Web Store to install this extension.</p>
             <h5>Change log - version 1.7</h5>
             <p>
               The work done on hodidays is not considered for OnTime calculation by the company.
@@ -228,41 +231,6 @@
         <p>This is a JSON file generator which allows user to input data from feature file and generate JSON file from
           it. <a href="https://github.com/aln0071/Feature-To-JSON" target="_blank">Source code</a></p>
         <iframe id='featureiframe' class="fillpage" src="./feature/feature.html"></iframe>
-      </div>
-    </div>
-  </div>
-
-  <!-- Precision Mode Modal -->
-  <div class="modal fade" id="precision-mode-modal">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Precision Mode</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-
-        <!-- Modal body -->
-        <div class="modal-body">
-          The extension automatically switches to the Precision Mode when the user keeps the 'Meeting details' tab open.
-          By default, the number of attendees reported by the Google Meet Web Application can contain duplicates. These duplicates occure when
-          someone starts sharing their screen or when a person joins the meet from multiple devices or tabs. With the new update, our Chrome Extension
-          can determine the actual number of attendees who are there in the meet without considering the duplicates. Please note that the
-          Precision Mode is active only when you keep the 'Meeting details' tab open. To open the 'Meeting details' tab, please follow these steps:
-          <br/>
-          <b>Option 1:</b> On the top right corner of your screen, you can see a toolbar as shown in the below image.
-          <img width="100%" src="icons/meet-menu.png" />
-          Please click on any of the encircled icon in that toolbar to open the meeting details tab.
-          <br/>
-          <b>Option 2:</b> In the extension's popup, click on the 'Meeting details' button, which will open the meeting details tab for you.
-        </div>
-
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-
       </div>
     </div>
   </div>

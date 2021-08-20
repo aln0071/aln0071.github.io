@@ -29,12 +29,6 @@ $('#teams-link').click(function (e) {
 	e.stopPropagation();
 })
 
-// prevent event propogation for precision mode modal opener link and open modal
-$('#precision-modal-opener').click(function (e) {
-	$('#precision-mode-modal').modal();
-	e.stopPropagation();
-})
-
 // section to handle click on elements that lead to other pages
 
 const ids = [
@@ -108,11 +102,4 @@ if (window.document.documentMode) {
 	// Do IE stuff
 	$("div[class='items-container']").attr("class", "projects-container")
 	$("div[class='item']").attr("class", "project")
-}
-
-// open precision mode modal based on hash params
-window.onload = () => {
-	if (window.location.hash === '#precision-mode') {
-		$('#precision-mode-modal').modal();
-	}
 }
